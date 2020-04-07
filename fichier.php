@@ -1,6 +1,6 @@
 <?php
 
-//Mise à jour de la date pour le site web//
+//1 - Mise à jour de la date pour le site web//
 $file = fopen("miseajour.txt", "c");
 
 fwrite($file, " La mise a jour à étais faite le: ".PHP_EOL);
@@ -9,7 +9,7 @@ var_dump(fgets($file));
 
 fclose($file);
 
-//Stocker les information sur le fichier Compteur.txt//
+//2 - Stocker les information sur le fichier Compteur.txt//
 
 $file = fopen("compteur.txt", "r+");
 
@@ -23,7 +23,7 @@ echo 'La page à était vue ' .$pages_vues. 'fois ';
 
 var_dump($pages_vues);
 
-//Stocker les informations dans un fichier csv//
+//3- Stocker les informations dans un fichier csv//
 $file = fopen("tab.csv", "w");
 
 $tab = array (                                 
@@ -41,6 +41,12 @@ $tab = array (
  var_dump($tab);
 
  fclose($fp);
+
+ //4 - Création d'un formulaire dans le fichier index.php//
+ $file =fopen("cible.php", "c+");
+
+ $file = fopen("style.css", "c++");
+
 
 
 
