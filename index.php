@@ -16,7 +16,7 @@ require "fichier.php";
 <div class="tab">
 <form action="cible.php"metthode="POST">
     <fieldset>
-        <legend>Vos coordonnées </legend>
+        <legend>Rédiger votre article </legend>
         <p>&nbsp;</p>
         <label for="Champsnom">Votre nom</label>
         <input type="text" id="champs_nom">
