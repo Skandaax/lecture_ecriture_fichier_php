@@ -11,7 +11,7 @@ fclose($file);
 
 //Compteur//
 
-$file = fopen("compteur.txt", "c+");
+$file = fopen("compteur.txt", "r+");
 
 $pages_vues = fgets($file); // nombre de pages vue
 $pages_vues++; //augmente de 1 le pages vues
