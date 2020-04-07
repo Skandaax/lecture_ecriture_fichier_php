@@ -3,7 +3,6 @@
 require "fichier.php";
 
 
-
 ?>
 
 

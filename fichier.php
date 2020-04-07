@@ -14,7 +14,7 @@ fclose($file);
 $file = fopen("compteur.txt", "r+");
 
 $pages_vues = fgets($file); // nombre de pages vue
-$pages_vues++; //augmente de 1 le pages vues
+$pages_vues+= 1; //augmente de 1 le pages vues
 fseek($file, 0); //on remet  le curseur au début des fichiers
 fwrite($file, $pages_vues); //on écrit à nouveau le nombre des pages vues
 fclose($file);
@@ -46,6 +46,8 @@ $tab = array (
  $file =fopen("cible.php", "c+");
 
  $file = fopen("style.css", "c++");
+
+ //5 - Envoie des données et ecriture sur un fichier csv//
 
 
 
