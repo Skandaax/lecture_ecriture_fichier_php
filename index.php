@@ -2,6 +2,8 @@
 
 require "fichier.php";
 
+
+
 ?>
 
 
@@ -13,7 +15,7 @@ require "fichier.php";
 
 <body>
 <div class="tab">
-<form action="#"metthode="POST">
+<form action="cible.php"metthode="POST">
     <fieldset>
         <legend>Vos coordonnées </legend>
         <p>&nbsp;</p>
@@ -30,8 +32,8 @@ require "fichier.php";
         <p>&nbsp;</p>
     </fieldset>
         <p>&nbsp;</p>
-    <fieldset>
-        <select name="choix">
+    <fieldset >
+        <select name="choix" class="select">
             <option value="choix">Choix 1</option>
             <option value="choix">Choix 2</option>
             <option value="choix">Choix 3</option>
