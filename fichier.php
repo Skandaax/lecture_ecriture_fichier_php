@@ -44,24 +44,22 @@ $tab = array (
 
  //4 - Création d'un formulaire dans le fichier index.php//
  $file =fopen("cible.php", "c+");
+ 
 
- $file = fopen("style.css", "c++");
+ $file = fopen("style.css", "c+");
+ 
 
  $file = fopen("formulaire.php", "c");
 
+ 
+
  //5 - Envoie des données et ecriture sur un fichier csv//
 
- $form = array
- (
-    $_POST['nom'],
-    $_POST['prenom'],
-    $_POST['site'], 
-    $_POST['email'], 
-    $_POST['choix'], 
-    $_POST['note'],
-    $_POST['case'],
-    $_POST['comment']
- );
+
+
+
+
+
 
 
 

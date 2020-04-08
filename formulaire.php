@@ -1,3 +1,28 @@
+<?php
+ $form = array
+ (
+    ['nom'],
+    ['prenom'],
+    ['site'], 
+    ['email'], 
+    ['choix'], 
+    ['note'],
+    ['case'],
+    ['comment']
+ );
+
+ $file = fopen("donnees_form.csv", "a+");
+
+ fputcsv($file, $_POST);
+
+ fclose($file);
+
+
+ var_dump($_POST);
+
+ ?>
+
+
 <head>
     <meta charset="utf-8">
     <title>Mon formulaire</title>
