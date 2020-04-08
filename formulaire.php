@@ -1,7 +1,8 @@
 <?php
 
 
- $file = fopen("donnees_form.csv", "a+");
+
+ $file = fopen("donnees_form.csv", "c");
 
  fputcsv($file, $_POST);
 
