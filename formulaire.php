@@ -1,15 +1,5 @@
 <?php
- $form = array
- (
-    ['nom'],
-    ['prenom'],
-    ['site'], 
-    ['email'], 
-    ['choix'], 
-    ['note'],
-    ['case'],
-    ['comment']
- );
+
 
  $file = fopen("donnees_form.csv", "a+");
 
@@ -31,7 +21,7 @@
 
 <body>
 <div class="tab">
-<form action="cible.php" method="post">
+<form action="#" method="POST">
                 <p>
                     <label for="nom">Votre nom</label>
                     <input type="text" id="nom" name="nom" placeholder="Votre nom">
