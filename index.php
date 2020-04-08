@@ -14,35 +14,57 @@ require "fichier.php";
 
 <body>
 <div class="tab">
-<form action="cible.php"metthode="POST">
-    <fieldset>
-        <legend>Rédiger votre article </legend>
-        <p>&nbsp;</p>
-        <label for="Champsnom">Votre nom</label>
-        <input type="text" id="champs_nom">
-        <label for="Champsprenom">Votre prénom</label>
-        <input type="text" id="champs_prenom">
-        <p>&nbsp;</p>
-        <label for="Champsemail">Votre email</label>
-        <input type="text" id="champs_email">
-        <p>&nbsp;</p>
-        <label for="Commentaire">Ecriver votre article</label>    
-        <textarea type="champscommentaire"></textarea> 
-        <p>&nbsp;</p>
-    </fieldset>
-        <p>&nbsp;</p>
-    <fieldset >
-        <select name="choix" class="select">
-            <option value="choix">Choix 1</option>
-            <option value="choix">Choix 2</option>
-            <option value="choix">Choix 3</option>
-            <option value="choix">Choix 4</option>
-            <option value="choix">Choix 5</option>
-        </select><br>
-    </fieldset>
-        <p>&nbsp;</p>
-        <p><input type="submit" value="Ajouter">
-</form>
+<form action="cible.php" method="post">
+                <p>
+                    <label for="nom">Votre nom</label>
+                    <input type="text" id="nom" name="nom" placeholder="Votre nom">
+                    <label for="prenom">Prénom</label>
+                    <input type="text" id="prenom" name="prenom" placeholder="Votre prénom">
+                </p>
+                <p>
+                    <label for="site">Votre site web</label>
+                    <input type="text" id="site" name="site" placeholder="Votre site web">
+                    <label for="mail">Votre mail</label>
+                    <input type="text" id="mail" name="email" placeholder="Votre e:mail">
+                </p>
+                <p>
+                    <select name="choix" size="4">
+                        <OPTION>Lundi
+                        <OPTION>Mardi
+                        <OPTION>Mercredi
+                        <OPTION>Jeudi
+                        <OPTION>Vendredi
+                        <OPTION>Samedi
+                </p>
+                <p>Note /5 : nom
+                    <label for="rad0">0</label>
+                    <input type="radio" id="rad0" name="note" value="0">
+                    <label for="rad1">1</label>
+                    <input type="radio" id="rad1" name="note" value="1">
+                    <label for="rad2">2</label>
+                    <input type="radio" id="rad2" name="note" value="2">
+                    <label for="rad3">3</label>
+                    <input type="radio" id="rad3" name="note" value="3">
+                    <label for="rad4">4</label>
+                    <input type="radio" id="rad4" name="note" value="4">
+                    <label for="rad5">5</label>
+                    <input type="radio" id="rad5" name="note" value="5">
+                </p>
+                </p>
+                    <label for="rad0">J'aime</label>
+                    <input type="checkbox" name="case" value="1">
+                    <label for="rad0">Je n'aime pas</label>
+                    <input type="checkbox" name="case" value="2">
+
+                <p>
+                <p> 
+                
+                    <label for="comment">Laissez-nous un commentaire</label><br>
+                    <textarea id="comment" rows="5" cols="40"></textarea>
+                </p>
+                <p><input type="submit" value="Envoyer">
+                </p>
+            </form>
 </div>
 
 </body>
