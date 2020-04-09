@@ -52,10 +52,15 @@ $tab = array (
  $file = fopen("formulaire.php", "c");
 
 
-
  //6 - Charger des listes sur un fichier csv
 
- 
+ $contenu = file_get_contents("tab.csv");
+ echo $contenu;
+
+ var_dump($contenu);
+
+ //7 Enregistrer cette liste dans un fichier json //
+
 
 
 
