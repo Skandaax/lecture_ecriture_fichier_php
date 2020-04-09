@@ -36,11 +36,7 @@
      $form = ["titre" => $form[0], "description" => $form{1}];
 }
 
-var_dump($form);
 
- $json = fopen("tab.json", "w");
- fwrite($json, json_encode($form));
- fclose($json);
 
  ?>
 

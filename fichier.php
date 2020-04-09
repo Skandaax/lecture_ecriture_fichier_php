@@ -62,23 +62,41 @@ $tab = array (
  //correction du 6//
 $file = fopen("tab.csv", "r");
 
+ //correction du 6//
+ $file = fopen("tab.csv", "r");
 
+ $form = [];
+ $tab_line = "";
+ while($tab_line != false) {
+     $tab_line = fgetcsv($file);
+     if ($tab_line != false) {
+         array_push($form, $tab_line);
+     }
+ }
+ 
+ fclose($file);
+ 
+ var_dump($form);
+ 
+ $html = "<p>Les donnéees du formulaire : </p><ul>";
+ foreach($form as $form) {
+     $html .= "<li>".$form[0]."</li>";
+ }
+ $html .= "</ul>";
 
-$form = [];
-$tab_line = "";
-while($tab_line != false) {
-    $tab_line = fgetcsv($file);
-    if ($tab_line != false) {
-        array_push($form, $tab_line);
-    }
+ foreach($form as $form) {
+     $form = ["titre" => $form[0], "description" => $form{1}];
 }
 
-fclose($file);
-
-//var_dump($form);
+var_dump($form);
 
  //7 Enregistrer cette liste dans un fichier json //
 
+ $json = fopen("tab.json", "w");
+ fwrite($json, json_encode($form));
+ fclose($json);
+
+var_dump($json);
 
 
 
