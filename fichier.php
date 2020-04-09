@@ -75,8 +75,11 @@ fclose($file);
 
 var_dump($form);
 
-
-
+$html = "<p>Les donnéees du formulaire : </p><ul>";
+foreach($form as $form) {
+    $html .= "<li>".$form[0]."</li>";
+}
+$html = "</ul>";
  //7 Enregistrer cette liste dans un fichier json //
 
 

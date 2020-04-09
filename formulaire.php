@@ -1,5 +1,27 @@
 <?php
 
+ //correction du 6//
+ $file = fopen("donnees_form.csv", "r");
+
+ $form = [];
+ $tab_line = "";
+ while($tab_line != false) {
+     $tab_line = fgetcsv($file);
+     if ($tab_line != false) {
+         array_push($form, $tab_line);
+     }
+ }
+ 
+ fclose($file);
+ 
+ var_dump($form);
+ 
+ $html = "<p>Les donnéees du formulaire : </p><ul>";
+ foreach($form as $form) {
+     $html .= "<li>".$form[0]."</li>";
+ }
+ $html = "</ul>";
+
 //5 - Envoie des données et ecriture sur un fichier csv//
 
  $file = fopen("donnees_form.csv", "c");
@@ -19,6 +41,8 @@
 </head>
 
 <body>
+    <?= $html ?>
+
 <div class="tab">
 <form action="#" method="POST">
                 <p>
