@@ -1,6 +1,6 @@
 <?php
 
-
+//5 - Envoie des données et ecriture sur un fichier csv//
 
  $file = fopen("donnees_form.csv", "c");
 
@@ -8,11 +8,9 @@
 
  fclose($file);
 
-
  var_dump($_POST);
 
  ?>
-
 
 <head>
     <meta charset="utf-8">

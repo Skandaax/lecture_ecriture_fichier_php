@@ -51,9 +51,11 @@ $tab = array (
 
  $file = fopen("formulaire.php", "c");
 
- 
 
- //5 - Envoie des données et ecriture sur un fichier csv//
+
+ //6 - Charger des listes sur un fichier csv
+
+ 
 
 
 
