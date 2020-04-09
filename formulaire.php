@@ -10,31 +10,7 @@
 
  //var_dump($_POST);
 
- //correction du 6//
- $file = fopen("tab.csv", "r");
-
- $form = [];
- $tab_line = "";
- while($tab_line != false) {
-     $tab_line = fgetcsv($file);
-     if ($tab_line != false) {
-         array_push($form, $tab_line);
-     }
- }
  
- fclose($file);
- 
- var_dump($form);
- 
- $html = "<p>Les donnéees du formulaire : </p><ul>";
- foreach($form as $form) {
-     $html .= "<li>".$form[0]."</li>";
- }
- $html .= "</ul>";
-
- foreach($form as $form) {
-     $form = ["titre" => $form[0], "description" => $form{1}];
-}
 
 
 
