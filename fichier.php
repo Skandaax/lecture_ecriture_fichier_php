@@ -43,10 +43,10 @@ $tab = array (
  fclose($fp);
 
  //4 - Création d'un formulaire dans le fichier index.php//
- $file =fopen("cible.php", "c+");
+ $file =fopen("cible.php", "c");
  
 
- $file = fopen("style.css", "c+");
+ $file = fopen("style.css", "c");
  
 
  $file = fopen("formulaire.php", "c");
