@@ -54,7 +54,7 @@ $tab = array (
 
  //6 - Charger des listes sur un fichier csv
 
- $contenu = file_get_contents("tab.csv");
+ $contenu = file_get_contents("donnees_form.csv");
  echo $contenu;
 
  var_dump($contenu);
