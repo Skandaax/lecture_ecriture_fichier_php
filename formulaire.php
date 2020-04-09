@@ -1,7 +1,17 @@
 <?php
 
+//5 - Envoie des données et ecriture sur un fichier csv//
+
+ $file = fopen("donnees_form.csv", "c");
+
+ fputcsv($file, $_POST);
+
+ fclose($file);
+
+ //var_dump($_POST);
+
  //correction du 6//
- $file = fopen("donnees_form.csv", "r");
+ $file = fopen("tab.csv", "r");
 
  $form = [];
  $tab_line = "";
@@ -20,17 +30,17 @@
  foreach($form as $form) {
      $html .= "<li>".$form[0]."</li>";
  }
- $html = "</ul>";
+ $html .= "</ul>";
 
-//5 - Envoie des données et ecriture sur un fichier csv//
+ foreach($form as $form) {
+     $form = ["titre" => $form[0], "description" => $form{1}];
+}
 
- $file = fopen("donnees_form.csv", "c");
+var_dump($form);
 
- fputcsv($file, $_POST);
-
- fclose($file);
-
- var_dump($_POST);
+ $json = fopen("tab.json", "w");
+ fwrite($json, json_encode($form));
+ fclose($json);
 
  ?>
 

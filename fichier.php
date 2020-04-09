@@ -5,7 +5,7 @@ $file = fopen("miseajour.txt", "c");
 
 fwrite($file, " La mise a jour à étais faite le: ".PHP_EOL);
 
-var_dump(fgets($file));
+//var_dump(fgets($file));
 
 fclose($file);
 
@@ -38,7 +38,7 @@ $tab = array (
      fputcsv($fp, $fields);
  }
 
- var_dump($tab);
+// var_dump($tab);
 
  fclose($fp);
 
@@ -60,7 +60,9 @@ $tab = array (
  var_dump($contenu);
 
  //correction du 6//
-$file = fopen("donnees_form.csv", "r");
+$file = fopen("tab.csv", "r");
+
+
 
 $form = [];
 $tab_line = "";
@@ -73,15 +75,9 @@ while($tab_line != false) {
 
 fclose($file);
 
-var_dump($form);
+//var_dump($form);
 
-$html = "<p>Les donnéees du formulaire : </p><ul>";
-foreach($form as $form) {
-    $html .= "<li>".$form[0]."</li>";
-}
-$html = "</ul>";
  //7 Enregistrer cette liste dans un fichier json //
-
 
 
 
